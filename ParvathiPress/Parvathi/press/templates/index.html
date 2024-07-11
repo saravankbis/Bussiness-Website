@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARVATHI PRESS WEB PAGE</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/1style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/images' %}">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="welcome.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+</head>
+<body>
+
+<!-- Preloader 
+  <div id="preloader">
+    <div id="container" class="container-preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span preloader-text="W" class="characters">W</span>
+        
+          <span preloader-text="E" class="characters">E</span>
+        
+          <span preloader-text="L" class="characters">L</span>
+        
+          <span preloader-text="C" class="characters">C</span>
+        
+          <span preloader-text="O" class="characters">O</span>
+        
+          <span preloader-text="M" class="characters">M</span>
+        
+          <span preloader-text="E" class="characters">E</span>
+        </div>
+      </div>	
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>	
+  <script>
+  $(document).ready(function() {
+  setTimeout(function() {
+    $('#container').addClass('loaded');
+  // Once the container has finished, the scroll appears
+    if ($('#container').hasClass('loaded')) {
+    // It is so that once the container is gone, the entire preloader section is deleted
+      $('#preloader').delay(9000).queue(function() {
+        $(this).remove();
+    });}
+  }, 3000);});
+  </script> -->
+ 
+
+  <!-- Navbar1 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="justify-content: center;" id="home">
+    <a class="navbar-brand" href="#">
+      <p><span style="color:blue;font-weight:bold">W</span>
+        <span style="color:RED;font-weight:bold">E</span>
+        <span style="color:GREEN;font-weight:bold">L</span>
+        <span style="color:BLACK;font-weight:bold">C</span>
+        <span style="color:GRAY;font-weight:bold">O</span>
+        <span style="color:ORANGE;font-weight:bold">M</span>
+        <span style="color:magenta;font-weight:bold">E</span>
+        <span style="color:RED;font-weight:bold">PARVATHI</span>
+        <span style="color:rgb(121, 202, 235);font-weight:bold">PRESS</span>
+      </p></a></nav>
+     
+
+
+    <!-- Navbar2 -->
+    <div class="Navbar2">
+    <div id="Images">
+      <img src="{% static 'images/Parvathi_logo-removebg-preview.jpg' %}" alt="logo" style="width: 150px;"></div>
+     
+     <div id="search">  
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search"><button type="submit" class="bg-success"><i class="fa fa-search" style="color: black;"></i></button>  
+      </form></div>
+     <ul>
+        <li><a class="nav-link" href="{% url 'Sign' %}"><i class="fa fa-sign-in" aria-hidden="true" style="font-size: large;"></i> <b>Sign in/Log in</b></a></li>
+        <li><a class="nav-link" href="{% url 'Helpcenter' %}"><i class="fa fa-user-circle-o" aria-hidden="true" style="font-size: large;"></i> <b>Help Center</b></a></li>
+     </ul></nav>
+    </div><br>
+
+    <!-- Navbar3 -->
+
+    <nav class="navbar navbar-expand-lg desktop-navbar-menu py-0 mega-menu navbar-menu" style="background-color:#f8f9fa; width: 100%; height: 50px;" >
+      <div class="container d-flex flex-row justify-content-center">
+          <div class="nav-item position-static" id="nav">
+              <a class="nav-link" style="color:#666666; margin-right: 15px; margin-top:0px;" href="index.html"><i class="fa fa-home" aria-hidden="true"></i> <b>Home</b></a>
+          </div>
+          <div class="nav-item position-static">
+              <a class="nav-link" style="color:#666666; margin-right: 15px;margin-top: 0px" href="{% url 'About' %}"><i class="fa fa-info-circle" aria-hidden="true"></i> <b>About</b></a>
+          </div>
+          <div class="nav-item position-static">
+              <a class="nav-link" style="color:#666666; margin-right: 15px;margin-top: 0px" href="{% url 'Contact' %}"><i class="fa fa-address-book" aria-hidden="true"></i> <b>Contact</b></a>
+          </div>
+          <div class="nav-item position-static">
+              <a class="nav-link" style="color: #666666; margin-right: 15px;margin-top: 0px" href="{% url 'Portfolio'%}"><i class="fa fa-commenting" aria-hidden="true"></i> <b>Portfolio</b></a>
+          </div>
+  
+          <!-- The dropdown item with spacing -->
+          <div class="nav-item dropdown" style="color:#666666; margin-top: -2px;" id="drop">
+            <a class="nav-link dropdown-toggle" href="{% url 'Products' %}" role="button" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-product-hunt" aria-hidden="true" style="margin-top: 5px;"></i>
+              <b>Product's link</b></a>
+            <ul class="dropdown-menu" >
+              <br>
+              <li class="dropdown-item" style="color:#666666"><a href="{% url 'Products' %}">Bussiness Card</a></li><br>
+              <li class="dropdown-item" style="color:#666666"><a href="{% url 'Products' %}">Id Card</a></li><br>
+              <li class="dropdown-item" style="color:#666666"><a href="{% url 'Products' %}">Printing</a></li><br>
+              <li class="dropdown-item" style="color:#666666"><a href="{% url 'Products' %}">Designs</a></li><br>
+              <li class="dropdown-item" style="color:#666666"><a href="{% url 'Products' %}">Rubber Stamp</a></li><br>
+            </ul>
+        </div>
+      </div>
+  </nav>
+  <br>
+
+  <div class="container" style="background-color: rgb(135, 206, 235); height: 300px; border-radius: 5px;"><br><br><br>
+    <h1 style="color: rgb(25, 25, 112); font-family: Arial; margin-left: 40px;"><b>Make Your Business Stand Out.</b></h1>
+    <p style="font-family: Arial, Helvetica, sans-serif;font-size: large; color:rgb(63, 60, 60); margin-left: 40px;">Business Cards,Id Cards,Rubber Stamps,<br>and more for great first impressions.</p>
+    <img src="{% static 'Images/stationary2.jpg' %}" width="450px" height="auto" style="margin-left: 650px; margin-top: -190px; border-radius: 5px;">
+  </div><br>
+  
+  <div style="text-align: center;"><h2 style="font-size: xx-large;"><b>Business Essentials</b></h2>
+  <h6 style="font-size: large; color: #666666;">Branded stationery is a fantastic way to boost your marketing efforts</h6>
+  <p><a  href="{% url 'Products' %}">Get customized price</a></p></div><br>
+
+  <div class="container" id="col3">
+    <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-3"><br>
+          <div class="container" id="c1"><br>
+            <img src="{% static 'Images/stationary4.jpg' %}" alt="Image 1" class="img-fluid" style="width: 300px; height: 200px;">
+            <h2>MULTI COLOR PRINTING</h2>
+            <p>In this process printing,involves of multiple ink colors to create a spectrum of hues and shades.</p>
+            </div>
+        </div>
+        <!-- Column 2 -->
+        <div class="col-md-3"><br>
+          <div class="container" id="c1"><br>
+            <img src="{% static 'Images/stationary1.jpg' %}" alt="Image 2" class="img-fluid" style="width: 300px; height: 200px;">
+            <h2>A4 PRINTING</h2>
+            <p>Adopted as the international standard in the ISO 216 standard in 1975.Widely used in offices, academic institutions, and for personal printing needs.</p></div>
+        </div>
+        <!-- Column 3 -->
+        <div class="col-md-3"><br>
+          <div class="container" id="c1"><br>
+            <img src="{% static 'Images/stationary.jpg' %}" alt="Image 3" class="img-fluid" style="width: 300px; height: 200px;">
+            <h2>LEETER HEAD'S</h2>
+            <p>Printing letterheads is a classic and essential service for a printing press. Here are some details often included in a professionally printed letterhead.</p></div>
+          </div>
+        <!-- Column 4 -->
+        <div class="col-md-3"><br>
+          <div class="container" id="c1"><br>
+            <img src="{% static 'Images/stationary3.jpg' %}" alt="Image 4" class="img-fluid" style="width: 300px; height: 200px;">
+            <h2>COVER'S</h2>
+            <p>visible through the envelope or outside cover or wrapper’’after‘‘or which bears the term ‘census’ on the envelope or outside cover or wrapper.</p></div>
+        </div> 
+    </div>
+</div>
+
+<div class="container" id="col3">
+  <div class="row">
+      <!-- Column 1 -->
+      <div class="col-md-3" ><br>
+        <div class="container" id="c1"><br>
+          <img src="{% static 'Images/business card.jpg' %}" alt="Image 1" class="img-fluid" style="width: 300px; height: 200px;">
+          <h2>Business Card's</h2>
+          <p>They're handy for networking and making connections in the professional world. Whether you'handing over a business card is a quick and tangible way to share your contact information.</p>
+          </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="col-md-3"><br>
+        <div class="container" id="c1"><br>
+          <img src="{% static 'Images/bookbinding.jpg' %}" alt="Image 2" class="img-fluid" style="width: 300px; height: 200px;">
+          <h2>BOOK BINDING</h2>
+          <p>Multi-color printing, also known as full-color or process printing, involves the use of multiple ink colors to create a wide spectrum of hues and shades and brochures, and packaging.</p></div>
+      </div>
+      <!-- Column 3 -->
+      <div class="col-md-3"><br>
+        <div class="container" id="c1"><br>
+          <img src="{% static 'Images/ledger.jpg' %}" alt="Image 3" class="img-fluid" style="width: 400px; height: 210px;">
+          <h2>LEDGER BINDING</h2>
+          <p>In this process refers to the process of securely associating cryptographic is user identities or accounts in ledger.</p></div>
+        </div>
+      <!-- Column 4 -->
+      <div class="col-md-3"><br>
+        <div class="container" id="c1"><br>
+          <img src="{% static 'Images/stationary3.jpg' %}" alt="Image 4" class="img-fluid" style="width: 300px; height: 200px;">
+          <h2> INVITATION</h2>
+          <p>Clearly state the purpose of the event, whether it's an opening, a showcase of new technology, or any other occasion.Provide the address and any relevant details about the location of this.</p></div>
+      </div> 
+  </div>
+</div>
+
+    
+</body><br><br>
+ <!-- Footer -->
+ <footer id="page-footer" class="bg-warning w3-center"><br>
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a><br><br>
+  <div class="flex flex-col md:flex-row md:justify-between space-y-6 md:space-y-0 text-center md:text-left text-sm container xl:max-w-6xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+    <nav class="space-x-2 sm:space-x-4">
+      <a href="{% url 'About' %}" class="font-medium text-gray-700 hover:text-blue-500">
+       <b>About</b>     
+      </a>
+      <a href="javascript:void(0)" class="font-medium text-gray-700 hover:text-blue-500">
+        <b>Terms of Service</b>
+      </a>
+      <a href="javascript:void(0)" class="font-medium text-gray-700 hover:text-blue-500">
+        <b>Privacy Policy</b>
+      </a>
+    </nav><br>
+    <i class="fa fa-twitter-square" aria-hidden="true" style="font-size:24px"></i>
+    <i class="fa fa-instagram" aria-hidden="true"style="font-size:24px"></i>
+    <i class="fa fa-facebook-square" aria-hidden="true"style="font-size:24px"></i><br><br>
+
+    <div class="text-gray-500">
+      <span class="font-medium"><b>Company</b></span> <b>© 2021</b>
+    </div>
+  </div>
+</footer>
+</html>
+
+
+  

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>List Card</title>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+    }
+    
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    .flip-card-front {
+      background-color: #bbb;
+      color: black;
+    }
+    
+    .flip-card-back {
+      background-color: #2980b9;
+      color: white;
+      text-shadow: 5px 5px 5px rgb(0, 0, 0);
+      transform: rotateY(180deg);
+    }
+    </style>
+    
+</head>
+<body>
+
+    <div id="demo" class="carousel slide"  data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+          <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+      
+        <div class="carousel-inner">
+          <div class="carousel-item active ">
+            <img src="{% static 'Images/bcimage4.jpg' %}" alt="" width="100%" height="500" class="d-block mx-auto">
+            <div class="carousel-caption" style="text-shadow: 5px 5px 5px yellow;">
+              <h2>WELLCOME TO PARVATHI PRESS</h2>
+              <p>This Page will used to check the amount</p>
+            </div>
+          </div>
+        
+          <div class="carousel-item ">
+            <img src="{% static 'Images/portfolio1.png' %}" alt="" width="100%" height="500" class="d-block mx-auto">
+            <div class="carousel-caption" style="text-shadow: 5px 5px 5px black;">
+              <h2>HEADING</h2>
+              <p>Fill The Area With sutable Contante</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="{% static 'Images/portfolio4.webp' %}" alt="" width="100%" height="500" class="d-block mx-auto">
+            <div class="carousel-caption">
+              <h2>HEADING</h2>
+              <p>Fill The Area With sutable Contante</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <img src="{% static 'Images/portfolio8.jpg' %}" alt="" width="100%" height="500" class="d-block mx-auto">
+            <div class="carousel-caption">
+              <h2>HEADING</h2>
+              <p>Fill The Area With sutable Contante</p>
+            </div>
+          </div>
+        </div>
+      
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span></a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span></a>
+      </div><br><br>
+
+      {% csrf_token %}
+<!-- Bussiness Card -->
+<div class="w3-container w3-padding-32" id="project1">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Bussiness Card</h3>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/business card3.png' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Business Card</h1> 
+            <p>Glass card</p> 
+            <p>price: 1.50 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  
+ <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/business card1.webp' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Business Card</h1> 
+        <p>Matt finish</p> 
+        <p>Price : 2.50 /-</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/business card2.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Business Card</h1> 
+        <p>Shinthatic Card</p> 
+        <p>Price : 2.00 /-</p>
+      </div>
+    </div>
+ </div>
+ </div> 
+
+ <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/business card.png' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Business Card</h1> 
+        <p>Normal Card</p> 
+        <p>Price : 1.00 /-</p>
+      </div>
+    </div>
+    </div>
+  </div>
+ 
+</div>
+
+<!-- ID CARD -->
+<div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Id Card</h3>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/id card.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Id Card</h1> 
+            <p>Portrait 1 Piece</p> 
+            <p>price: 150 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/id card1.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Id Card</h1> 
+            <p>landscap 1 piece</p> 
+            <p>Price : 130 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static 'Images/id card2.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Id Card<br> Print</h1> 
+          <p>Pocket Card</p> 
+          <p>Price : 120 /-</p>
+        </div>
+      </div>
+   </div>
+ </div> 
+
+ <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/id card3.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Id Card</h1> 
+        <p>Paper Card</p> 
+        <p>Price : 150 /-</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+<!-- PRINTING -->
+<div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Printing</h3>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/printing1.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Printing Paper</h1> 
+            <p>single Color Printing 1000 piece </p> 
+            <p>price: 200/-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/printing2.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Printing Paper</h1> 
+            <p>Double Color Printing 1000 Piece</p> 
+            <p>Price : 450 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static 'Images/printing3.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Printing Paper</h1> 
+          <p>Multi Color Printing 1000 Piece</p> 
+          <p>Price : 800 /-</p>
+        </div>
+      </div>
+   </div>
+ </div> 
+
+ <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/printing4.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Printing Art Paper</h1> 
+        <p>Digital Printing 1000 piece</p> 
+        <p>Price : 1100 /-</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+<!-- DESIGNS -->
+<div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Designs</h3>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/design.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Single Color Design</h1> 
+            <p>Printing Ddp Design Cost</p> 
+            <p>price: 100 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/design1.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Multi Color <br>Design</h1> 
+            <p>Paper Design 1000 Piece</p>
+            <p>Price : 250 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static 'Images/design2.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Flex Printing <br>Deign</h1> 
+          <p>Flex Deign Per 1 Piece</p> 
+          <p>Price : 250 /-</p>
+        </div>
+      </div>
+   </div>
+ </div> 
+
+ <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/design3.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Invitation <br>Design</h1> 
+        <p>Invitation Designing Cost</p> 
+        <p>Price : 500 /-</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+<!-- RUBBER STAMP -->
+<div class="w3-container w3-padding-32" id="projects">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Rubber Stamp</h3>
+</div>
+
+<div class="w3-row-padding">
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/stamp.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Rubber Stamp</h1> 
+            <p>Round Rubber Stamp</p> 
+            <p>price: 120 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'Images/stamp1.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+          </div>
+          <div class="flip-card-back">
+            <h1>Rubber Stamp</h1> 
+            <p>Rectanguler Rubber Stamp</p> 
+            <p>Price : 135 /-</p>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 m6 w3-margin-bottom">    
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static 'Images/stamp2.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+        </div>
+        <div class="flip-card-back">
+          <h1>Rubber Stamp</h1> 
+          <p>Automatic Rubber Stamp</p> 
+          <p>Price : 220 /-</p>
+        </div>
+      </div>
+   </div>
+ </div> 
+
+ <div class="w3-col l3 m6 w3-margin-bottom">    
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="{% static 'Images/stamp3.jpg' %}" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>Rubber Stamp</h1> 
+        <p>Number Date with Rubber Stamp</p> 
+        <p>Price : 250 /-</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+</body>
+</html>
+
+
